@@ -30,8 +30,9 @@ module.exports.views = {
   *                                                                           *
   ****************************************************************************/
 
-  engine: 'ejs',
-  
+  engine: 'nunjucks',
+  extension: 'html',
+
 
   /****************************************************************************
   *                                                                           *
@@ -57,14 +58,12 @@ module.exports.views = {
   *                                                                           *
   ****************************************************************************/
 
-  layout: 'layout'
-
   /****************************************************************************
   *                                                                           *
-  * Using Multiple Layouts with EJS                                           *
+  * Using Multiple Layouts                                                    *
   *                                                                           *
-  * If you're using the default engine, `ejs`, Sails supports the use of      *
-  * multiple `layout` files. To take advantage of this, before rendering a    *
+  * If you're using the default `ejs` or `handlebars` Sails supports the use  *
+  * of multiple `layout` files. To take advantage of this, before rendering a *
   * view, override the `layout` local in your controller by setting           *
   * `res.locals.layout`. (this is handy if you parts of your app's UI look    *
   * completely different from each other)                                     *
@@ -77,5 +76,21 @@ module.exports.views = {
   *                                                                           *
   ****************************************************************************/
 
-  
+  layout: false,
+
+  /****************************************************************************
+  *                                                                           *
+  * Partials are simply top-level snippets you can leverage to reuse template *
+  * for your server-side views. If you're using handlebars, you can take      *
+  * advantage of Sails' built-in `partials` support.                          *
+  *                                                                           *
+  * If `false` or empty partials will be located in the same folder as views. *
+  * Otherwise, if a string is specified, it will be interpreted as the        *
+  * relative path to your partial files from `views/` folder.                 *
+  *                                                                           *
+  ****************************************************************************/
+
+  partials: false
+
+
 };

@@ -1,9 +1,8 @@
 module.exports = {
-  get: function(req, res, next) {
+  index: function(req, res, next) {
     var locals = {
-      title: 'Herzuull inc.',
-      value: 'Dep'
+      title: 'Herzuull inc.'
     };
-    res.render('homepage', locals);
+    res.render('index.html', locals);
   }
 }

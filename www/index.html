@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%=title %></title>
+    <title>{{ title }}</title>
     <link rel="stylesheet" href="/styles/index.css" type="text/css" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   </head>
 
   <body>
     <section role="main">
+      {% include './pages/index.html' %}
     </section>
   </body>
 </html>
