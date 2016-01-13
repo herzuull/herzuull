@@ -33,5 +33,8 @@
     "url": "git://github.com/herzuull/herzuull.git"
   },
   "author": "herzuull",
-  "license": ""
+  "license": "",
+  "devDependencies": {
+    "nodemon": "^1.8.1"
+  }
 }
