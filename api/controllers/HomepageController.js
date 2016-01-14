@@ -1,8 +1,14 @@
+var View = require('../services/View.js');
+
 module.exports = {
   index: function(req, res, next) {
     var locals = {
-      title: 'Herzuull inc.'
+      title: 'Herzuull inc'
     };
-    res.render('index.html', locals);
+    View({
+      res: res,
+      view: 'index',
+      locals: locals
+    });
   }
 }
