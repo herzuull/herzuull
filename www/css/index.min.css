@@ -2,19 +2,59 @@
   font-family: 'oldstyle';
   src: url("../fonts/oldstyle.ttf"); }
 
-html, body {
-  font-size: 12px;
-  color: black; }
+body, html {
+  padding: 0;
+  margin: 0; }
 
 body {
+  padding: 0;
+  font-size: 12px;
+  color: black;
   font-family: 'oldstyle'; }
-  body main {
-    width: 1024px;
+  body > main {
+    width: 800px;
+    height: 100%;
     display: block;
     position: relative;
-    margin: 0 auto; }
-    body main a {
+    margin: 0 auto;
+    border-left: 1px solid rgba(0, 0, 0, 0.1);
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+    background-color: rgba(0, 0, 0, 0.01); }
+    body > main a {
       text-decoration: none;
       color: black; }
-    body main h1 {
-      font-family: 'oldstyle'; }
+    body > main h1 {
+      font-size: 3rem;
+      font-family: 'oldstyle';
+      margin-left: 20px; }
+    body > main > header nav ul {
+      padding: 0;
+      list-style: none; }
+      body > main > header nav ul li {
+        display: inline-block;
+        width: 24.5%;
+        text-align: center; }
+        body > main > header nav ul li a {
+          display: inline-block;
+          font-size: 1.2rem;
+          width: 100%;
+          background-color: transparent;
+          transition: background-color .5s;
+          padding-bottom: 1px; }
+          body > main > header nav ul li a:hover {
+            background-color: rgba(200, 0, 0, 0.05); }
+          body > main > header nav ul li a.active {
+            border-bottom: 1px solid rgba(200, 0, 0, 0.5); }
+    body > main > section h2 {
+      margin-left: 30px; }
+    body > main > footer {
+      display: inline-block;
+      position: absolute;
+      bottom: 0;
+      padding-bottom: 30px;
+      text-align: center; }
+
+#contentObject {
+  width: 0;
+  height: 0;
+  visibility: hidden; }

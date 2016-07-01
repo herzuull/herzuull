@@ -5,7 +5,9 @@
   "description": "a Sails application",
   "keywords": [],
   "dependencies": {
-    "express": "^4.14.0"
+    "ejs": "^2.4.2",
+    "express": "^4.14.0",
+    "express-ejs-layouts": "^2.1.0"
   },
   "scripts": {
     "start": "node app.js",
