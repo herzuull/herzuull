@@ -3,11 +3,12 @@
   <head>
     <link rel="stylesheet" href="./css/index.min.css" />
     <script src="./js/index.min.js"></script>
+    <title><%= title %></title>
   </head>
-  <body>
+  <body style="background-image: url(<%= illustration.main.url %>)">
     <main>
       <% include ./partials/header %>
-      <main>
+      <content>
         <section>
           <%- body %>
         </section>
@@ -15,7 +16,7 @@
           <div>
           </div>
         </aside>
-      </main>
+      </content>
       <% include ./partials/footer %>
     </main>
   </body>

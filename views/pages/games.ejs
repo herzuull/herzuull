@@ -1,1 +1,6 @@
-<h2>games</h2>
+<h2><%=title%></h2>
+<ul>
+  <% Object.keys(games).forEach(function(key) { %>
+    <li><%= games[key].title %></li>
+  <% }) %>
+</ul>

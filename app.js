@@ -1,29 +1,49 @@
-var express = require('express');
-var app = express();
-var expressLayouts = require('express-ejs-layouts');
+var app = require('./config/config.js');
+var configuration = require('./config/prismic-configuration.js');
+var Prismic = require('prismic.io');
+var prismicObjectToJSON = require('./service/prismic.js');
 
-app.set('port', (process.env.PORT || 1999));
+function api(req, res) {
+  // So we can use this information in the views
+  res.locals.ctx = {
+    endpoint: configuration.apiEndpoint,
+    linkResolver: configuration.linkResolver
+  };
+  return prismic.api(configuration.apiEndpoint, {
+    accessToken: configuration.accessToken,
+    req: req
+  });
+}
 
-app.use(express.static(__dirname + '/www/'));
-// views is directory for all template files
-app.set('view engine', 'ejs');
-
-app.use(expressLayouts);
+function handleError(err, req, res) {
+  if (err.status == 404) {
+    res.status(404).send("404 not found");
+  } else {
+    res.status(500).send("Error 500: " + err.message);
+  }
+}
 
 app.get('/', function(req, res) {
-  res.render('pages/index', {page: 'index'});
+  Prismic.api(configuration.apiEndpoint + '?accessToken=' + configuration.accessToken)
+  .then(function(api) {
+    return api.query(Prismic.Predicates.at('document.type', 'home'));
+  }).then(function(fetch) {
+    res.render('pages/home', prismicObjectToJSON('page', fetch.results[0]));
+  }, function(err) {
+    res.render('pages/404', {page: 'home'});
+  });
 });
 
-app.get('/drawings', function(req, res) {
-  res.render('pages/drawings', {page: 'drawings'});
-});
-
-app.get('/games', function(req, res) {
-  res.render('pages/games', {page: 'games'});
-});
-
-app.get('/cv', function(req, res) {
-  res.render('pages/cv', {page: 'cv'});
+app.get('/:slug', function(req, res) {
+  var slug = req.params.slug || 'home';
+  Prismic.api(configuration.apiEndpoint + '?accessToken=' + configuration.accessToken)
+  .then(function(api) {
+    return api.query(Prismic.Predicates.at('document.type', slug));
+  }).then(function(fetch) {
+    res.render('pages/' + slug, prismicObjectToJSON('page', fetch.results[0]));
+  }, function(err) {
+    res.render('pages/404', {page: 'home'});
+  });
 });
 
 app.listen(app.get('port'), function() {

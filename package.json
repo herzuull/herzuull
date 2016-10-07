@@ -6,8 +6,17 @@
   "keywords": [],
   "dependencies": {
     "ejs": "^2.4.2",
+    "errorhandler": "^1.4.3",
     "express": "^4.14.0",
-    "express-ejs-layouts": "^2.1.0"
+    "express-ejs-layouts": "^2.1.0",
+    "http": "0.0.0",
+    "method-override": "^2.3.6",
+    "morgan": "^1.7.0",
+    "path": "^0.12.7",
+    "prismic-nodejs": "^1.1.0",
+    "prismic.io": "^3.2.0",
+    "request": "^2.75.0",
+    "serve-favicon": "^2.3.0"
   },
   "scripts": {
     "start": "node app.js",
@@ -23,7 +32,7 @@
   "devDependencies": {
     "del": "^2.2.1",
     "gulp": "^3.9.1",
-    "gulp-clean-css": "^2.0.10",
+    "gulp-clean-css": "^2.0.13",
     "gulp-concat": "^2.6.0",
     "gulp-minify-css": "^1.2.4",
     "gulp-minify-html": "^1.0.6",

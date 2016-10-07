@@ -2,10 +2,10 @@
   <h1><a href="/">Herzuull</a></h1>
   <nav>
     <ul>
-      <li class="nav"><a href="/" class="<%= (page === 'index') ? 'active' : ''; %>">house</a></li>
-      <li class="nav"><a href="/drawings" class="<%= page === 'drawings' ? 'active' : ''; %>">drawings</a></li>
-      <li class="nav"><a href="/games" class="<%= page === 'games' ? 'active' : ''; %>">games</a></li>
-      <li class="nav"><a href="/cv" class="<%= page === 'cv' ? 'active' : ''; %>">curriculum vitae</a></li>
+      <li class="nav"><a href="/" class="<%= (type === 'index') ? 'active' : ''; %>">home</a></li>
+      <li class="nav"><a href="/drawings" class="<%= type === 'drawings' ? 'active' : ''; %>">drawings</a></li>
+      <li class="nav"><a href="/games" class="<%= type === 'games' ? 'active' : ''; %>">games</a></li>
+      <li class="nav"><a href="/cv" class="<%= type === 'cv' ? 'active' : ''; %>">curriculum vitae</a></li>
     </ul>
   </nav>
 </header>
