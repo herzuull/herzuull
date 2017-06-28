@@ -16,7 +16,7 @@ function getValue(fragment) {
     return fragment.value;
   }
   if (fragment.blocks) {
-    console.log(fragment.blocks);
+    //console.log(fragment.blocks);
     return formatBlocks(fragment.blocks);
   }
   return fragment;
@@ -25,7 +25,7 @@ function getValue(fragment) {
 function formatBlocks(blocks) {
   var text = '';
   blocks.forEach(function (block) {
-    console.log('>>> Block ', block);
+    //console.log('>>> Block ', block);
     switch (block.type) {
       case 'heading1': text += `<h1>${block.text}</h1>`; break;
       case 'heading2': text += `<h2>${block.text}</h2>`; break;
