@@ -2,8 +2,7 @@ module.exports = function(req, res, next) {
   if (!req.session.locale) {
     req.session.locale = 'en'
   }
-  const sections = require(`../content/${req.session.locale}/Sections`).sections
-  console.log(sections)
+  const sections = require(`../content/${req.session.locale}/sections`).sections
   res.locals = {
     locale: req.session.locale,
     menu: {
@@ -13,6 +12,5 @@ module.exports = function(req, res, next) {
       contact: sections[3],
     },
   }
-  console.log(req.locals)
   next()
 }
