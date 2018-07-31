@@ -1,0 +1,20 @@
+{
+  "sections": [
+    {
+      "slug": "/",
+      "title": "Home"
+    },
+    {
+      "slug": "/arts",
+      "title": "Arts"
+    },
+    {
+      "slug": "/games",
+      "title": "Games"
+    },
+    {
+      "slug": "/contact",
+      "title": "Contact"
+    }
+  ]
+}

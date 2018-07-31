@@ -1,0 +1,14 @@
+{% extends "index.html" %}
+
+{% block body %}
+<section>
+    <h2>{{title}}</h2>
+    <p><em>{{chapo}}</em></p>
+    {% for paragraph in content %}
+    <h3>{{paragraph.title}}</h3>
+    <p>
+        {{paragraph.text|html}}
+    </p>
+    {% endfor %}
+</section>
+{% endblock %}

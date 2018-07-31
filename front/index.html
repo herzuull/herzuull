@@ -1,0 +1,25 @@
+<!doctype html>
+
+<html lang="{{ locale }}">
+    <head>
+
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="./css/index.css" />
+
+    </head>
+    <body>
+        <section role="main" class="main">
+            <aside class="menu">
+                {% include "./sections/menu.html" %}
+            </aside>
+            <main>
+                {% include './sections/header.html' %}
+                {% block body %}{% endblock %}
+            </main>
+            <aside class="social">
+                {% include "./sections/social.html" %}
+            </aside>
+        </section>
+    </body>
+    <script src="./js/index.js"></script>
+</html>
