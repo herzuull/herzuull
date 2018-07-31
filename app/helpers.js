@@ -27,5 +27,15 @@ module.exports = {
     env.addFilter('json', (data, indentor, indents) =>
       markSafe(CircularJSON.stringify(data, indentor, indents))
     )
+
+    env.addFilter('truncate', function(data, max, killwords, end) {
+      if (!data) return ''
+      return truncate(data, max, killwords, end)
+    })
+
+    env.addFilter('replace', function(str, old, new_, maxCount) {
+      if (!str) return ''
+      return replace(str, old, new_, maxCount)
+    })
   },
 }

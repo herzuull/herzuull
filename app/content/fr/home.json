@@ -1,4 +1,10 @@
 {
   "title": "Accueil",
-  "chapo": "Bienvenue sur le site d'Herzuüll"
+  "chapo": "Bienvenue sur le site d'Herzuüll",
+  "content": [
+    {
+      "title": "Qui suis-je ?",
+      "text": "37 ans, heureux papa de 2 enfants, je suis Lead Developper chez AXA Services. Je travaille à Paris depuis 2005.\nJe suis développeur NodeJS"
+    }
+  ]
 }

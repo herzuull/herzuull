@@ -62,10 +62,12 @@ aside.menu nav li {
 
 aside.menu nav li a {
   font-size: 2em;
+  transition: text-shadow 0.3s, bold 0.3s;
 }
 
 aside.menu nav a:hover {
   font-weight: bold;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 1);
 }
 
 main {
@@ -75,6 +77,11 @@ main {
   color: black;
   padding: 0 20px;
   max-width: 33vw;
+}
+
+main a {
+  text-decoration: underline;
+  color: black;
 }
 
 aside.social {
