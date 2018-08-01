@@ -1,0 +1,20 @@
+{% macro bodyContent(content) %}
+<section class="body-content">
+{% for paragraph in content %}
+    {% if paragraph.title %}
+    <h3>{{paragraph.title}}</h3>
+    {% endif %}
+    {% if paragraph.text %}
+    <p>
+        {{paragraph.text|html}}
+    </p>
+    {% endif %}
+    {% if paragraph.image %}
+    <img src="{{paragraph.image.src}}" alt="{{paragraph.image.alt}}" style="width:{{paragraph.image.width}}" />
+    {% endif %}
+    {% if paragraph.object %}
+    <object data="{{paragraph.object.data}}" type="text/html" typemustmatch width="{{paragraph.object.width}}" height="{{paragraph.object.height}}"></object>
+    {% endif %}
+{% endfor %}
+</section>
+{% endmacro %}

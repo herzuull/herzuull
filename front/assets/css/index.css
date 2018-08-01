@@ -7,7 +7,8 @@ body,
 html {
   padding: 0;
   margin: 0;
-  min-height: 100vh;
+  height: 100vh;
+  width: 100vw;
 }
 
 body {
@@ -24,14 +25,21 @@ a:visited {
 
 ul {
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 li {
   display: block;
 }
 
+img {
+  cursor: pointer;
+}
+
 h1 {
-  font-size: 3em;
+  margin: 0;
+  font-size: 4rem;
   text-transform: uppercase;
   border-bottom: 1px solid black;
 }
@@ -39,10 +47,17 @@ h1 {
 section.main {
   display: flex;
   min-height: 100vh;
+  max-width: 50vw;
+  transition: blur 1s;
+}
+
+section.main.blur {
+  filter: blur(3px);
 }
 
 aside.menu {
   flex-grow: 0.3;
+  max-width: 10vw;
   min-height: 100vh;
   text-transform: uppercase;
   text-align: right;
@@ -57,12 +72,21 @@ aside.menu nav {
 aside.menu nav li {
   display: block;
   width: 100%;
-  height: 30px;
+  height: 5rem;
+}
+
+aside.menu nav ul {
+  margin: 0;
+  padding: 0;
 }
 
 aside.menu nav li a {
-  font-size: 2em;
+  display: block;
+  width: 100%;
+  height: 5rem;
+  font-size: 1.7rem;
   transition: text-shadow 0.3s, bold 0.3s;
+  text-align: right;
 }
 
 aside.menu nav a:hover {
@@ -76,10 +100,11 @@ main {
   background-color: white;
   color: black;
   padding: 0 20px;
-  max-width: 33vw;
+  max-width: 100vw;
+  font-size: 1.2rem;
 }
 
-main a {
+.body-content > p > a {
   text-decoration: underline;
   color: black;
 }
@@ -87,4 +112,32 @@ main a {
 aside.social {
   min-height: 100vh;
   flex-grow: 3;
+  max-width: 40vw;
+  padding-left: 1vw;
+  padding-top: 1vw;
+}
+
+div.overlay {
+  cursor: pointer;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+img.overlayImage {
+  left: 0;
+  margin-top: 5vh;
+  margin-left: 10vw;
+}
+
+div.closeButton:before {
+  font-family: arial, sans-serif;
+  font-size: 5rem;
+  content: '\2297';
+  color: white;
+  position: absolute;
+  right: 1vw;
+  top: 1vh;
 }

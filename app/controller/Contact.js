@@ -1,8 +1,16 @@
 module.exports = {
   get: function(req, res, next) {
-    req.currentLocation = '/'
-    req.locals = Object.assign(res.locals, require(`../content/${req.session.locale}/contact.json`))
-    res.page = 'contact'
-    next()
+    const slug = req.params.slug
+    if (['arts', 'games', 'contact'].indexOf(slug) !== -1) {
+      req.currentLocation = req.path
+      req.locals = Object.assign(
+        res.locals,
+        require(`../content/${req.session.locale}/${slug}.json`)
+      )
+      res.page = slug
+      next()
+    } else {
+      next('Not found')
+    }
   },
 }

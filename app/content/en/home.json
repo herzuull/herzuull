@@ -1,4 +1,17 @@
 {
   "title": "Home",
-  "chapo": "Welcome on Herzuüll's website"
+  "chapo": "Welcome on Herzuull's website",
+  "content": [
+    {
+      "title": "Who am I ?",
+      "text": "37yo, happy father of two wonderful children, I'm the NodeJS Lead Developper of https://www.axa.com @ AXA Services. I'm working in Paris since 2005."
+    },
+    {
+      "image": {
+        "src": "./img/kevin-goualch-sketch.png",
+        "alt": "Kevin Goualch",
+        "width": "30vw"
+      }
+    }
+  ]
 }

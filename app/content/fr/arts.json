@@ -1,3 +1,39 @@
 {
-  "title": "Arts"
+  "title": "Arts",
+  "content": [
+    {
+      "Title": "Draws",
+      "text": "I'm drawing since I have 3. I love to draw medieval Fantasy, monsters, aliens and robots."
+    },
+    {
+      "text": "I'm using pencils, ink pen as Rotring or Copic Multiliner..."
+    },
+    {
+      "text": "You can found below, some examples of my draws. If you want to see more, do not hesitate to check my Instagram account : "
+    },
+    {
+      "title": "Herzuull",
+      "image": {
+        "src": "./img/herzuull.png",
+        "alt": "Herzuull",
+        "width": "20vw"
+      }
+    },
+    {
+      "title": "Chaos Sorceror",
+      "image": {
+        "src": "./img/Chaos-Sorceror.png",
+        "alt": "Chaos Sorceror image",
+        "width": "20vw"
+      }
+    },
+    {
+      "title": "Star Spawn on Jungle planet",
+      "image": {
+        "src": "./img/cthulette.png",
+        "alt": "Star Spawn on Jungle planet",
+        "width": "20vw"
+      }
+    }
+  ]
 }

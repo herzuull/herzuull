@@ -9,7 +9,7 @@ module.exports = {
   },
   set: function(req, res, next) {
     if (!!!req.session.locale) {
-      req.session.locale = 'en'
+      req.session.locale = process.env.DEFAULT_LOCALE
     }
   },
 }

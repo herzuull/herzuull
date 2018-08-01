@@ -1,3 +1,38 @@
 {
-  "title": "Games"
+  "title": "Jeux",
+  "content": [
+    {
+      "text": "Forxak, Unfathomable Space... sont les deux jeux sur lesquels j'ai travaillé durant de nombreuses années.\n Enfin surtout Forxak ; https://www.forxak.com.\n"
+    },
+    {
+      "title": "ForXak",
+      "text": "Forxak, FOReign Xenomorph Anihilate and Kill, Shoot them'up par excellence, j'ai voulu retranscrire l'atmosphere des Danmakus que l'on peut trouver sur des jeux comme Dodonpachi Dai Fukatsu ou plus récement sur Danmaku Unlimited."
+    },
+    {
+      "object": {
+        "data": "https://forxak.herokuapp.com",
+        "width": "400",
+        "height": "600"
+      }
+    },
+    {
+      "text": "Le jeu est codé en JavaScript ECMAScript V.5 avec un peux de 2018 dedans."
+    },
+    {
+      "text": "J'utilise une librairie, CreateJS pour le chargement des assets en RAM, et easelJS pour le WebGL."
+    },
+    {
+      "text": "Le jeu se veux compatible Browsers (Chrome, Firefox, Edge ou encore Safari) mais surtout jouable sur mobile et tablette dans le browser (Chrome / Safari de préférence)."
+    },
+    {
+      "text": "J'ai également publié une version Cordova sur le Google Play Store pour y jouer n'importe où n'importe quand ! https://play.google.com/store/apps/details?id=com.herzuull.forxakH5"
+    },
+    {
+      "object": {
+        "data": "http://herzuull.free.fr/us",
+        "width": "600",
+        "height": "400"
+      }
+    }
+  ]
 }

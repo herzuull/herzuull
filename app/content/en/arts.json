@@ -2,8 +2,38 @@
   "title": "Arts",
   "content": [
     {
-      "title": "Draws",
-      "text": "Here you can find a lot of my first hobby : drawing\nI'm a drawer since I have 3, and I love to draw.\nI recently bough a Galaxy Note 8, and it's a powerfull tool to create drawing in the train or in the doctor room...\nI'm using a lot of tools to draw :\n- Black pen as Copic Multiliner SP (from .003 to BS)\n- laser jet paper (You can use alcool marker easily without creating hole in your paper !\n- Copic markers, alcool markers, ideal to colorise quickly without making a lot of lines as with reynolds markers..."
+      "Title": "Draws",
+      "text": "I'm drawing since I have 3. I love to draw medieval Fantasy, monsters, aliens and robots."
+    },
+    {
+      "text": "I'm using pencils, ink pen as Rotring or Copic Multiliner..."
+    },
+    {
+      "text": "You can found below, some examples of my draws. If you want to see more, do not hesitate to check my Instagram account : "
+    },
+    {
+      "title": "Herzuull",
+      "image": {
+        "src": "./img/herzuull.png",
+        "alt": "Herzuull",
+        "width": "30vw"
+      }
+    },
+    {
+      "title": "Chaos Sorceror",
+      "image": {
+        "src": "./img/Chaos-Sorceror.png",
+        "alt": "Chaos Sorceror image",
+        "width": "30vw"
+      }
+    },
+    {
+      "title": "Star Spawn on Jungle planet",
+      "image": {
+        "src": "./img/cthulette.png",
+        "alt": "Star Spawn on Jungle planet",
+        "width": "30vw"
+      }
     }
   ]
 }
