@@ -5,6 +5,8 @@
   "description": "Herzuull website",
   "dependencies": {
     "bluebird": "^3.4.7",
+    "connect": "^3.6.6",
+    "connect-heroku-redis": "^0.1.5",
     "connect-redis": "^3.3.3",
     "cookie-parser": "^1.4.3",
     "cookies": "^0.7.1",

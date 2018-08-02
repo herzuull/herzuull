@@ -7,32 +7,22 @@ const nunjucks = require('nunjucks')
 const helmet = require('helmet')
 const session = require('express-session')
 const RedisStore = require('connect-redis')(session)
-const redis = require('redis')
+const url = require('url')
 
 require('dotenv').config()
 
 app.use(cookieParser())
 
-var options = {
-  secret: process.env.COOKIE_SECRET,
-  cookie: {},
-  store: new RedisStore({
-    url: process.env.REDIS_URL,
-  }),
-  saveUninitialized: true,
-  resave: false,
-}
-
-if (process.env.NODE_ENV === 'production') {
-  app.set('trust proxy', 1) // trust first proxy
-  options.cookie.secure = true // serve secure cookies
-}
-
-console.log('ENV => ', process.env)
-
-console.log('Session options > ', options)
-
-app.use(session(options))
+app.use(
+  session({
+    store: new RedisStore({
+      url: process.env.REDISTOGO_URL,
+    }),
+    saveUninitialized: true,
+    secret: 'keyboard cat',
+    resave: false,
+  })
+)
 
 app.use(helmet())
 app.disable('x-powered-by')
