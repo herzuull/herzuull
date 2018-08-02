@@ -7,6 +7,7 @@ const nunjucks = require('nunjucks')
 const helmet = require('helmet')
 const session = require('express-session')
 const RedisStore = require('connect-redis')(session)
+const redis = require('redis')
 
 require('dotenv').config()
 
