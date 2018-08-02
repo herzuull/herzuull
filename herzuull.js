@@ -1,4 +1,5 @@
 const express = require('express')
+const cookieParser = require('cookie-parser')
 const app = express()
 const helpers = require('./app/helpers')
 const path = require('path')
@@ -9,10 +10,7 @@ const RedisStore = require('connect-redis')(session)
 
 require('dotenv').config()
 
-app.use(helmet())
-app.disable('x-powered-by')
-
-app.use(express.cookieParser())
+app.use(cookieParser())
 
 const options = {
   url: process.env.REDIS_URL,
@@ -33,6 +31,9 @@ if (app.get('env') === 'production') {
 }
 
 app.use(session(sess))
+
+app.use(helmet())
+app.disable('x-powered-by')
 
 app.set('port', process.env.PORT || 1999)
 
