@@ -12,25 +12,27 @@ require('dotenv').config()
 
 app.use(cookieParser())
 
-const options = {
-  url: process.env.REDIS_URL,
-  password: process.env.REDIS_PASSWORD,
-}
-
-var sess = {
+var options = {
   secret: process.env.COOKIE_SECRET,
   cookie: {},
-  store: new RedisStore(options),
+  store: new RedisStore({
+    host: process.env.REDIS_URL,
+    user: process.env.REDIS_USER,
+    port: process.env.REDIS_PORT,
+    password: process.env.REDIS_PASSWORD,
+  }),
   saveUninitialized: true,
   resave: false,
 }
 
-if (app.get('env') === 'production') {
+if (process.env.NODE_ENV === 'production') {
   app.set('trust proxy', 1) // trust first proxy
-  sess.cookie.secure = true // serve secure cookies
+  options.cookie.secure = true // serve secure cookies
 }
 
-app.use(session(sess))
+console.log('ENV => ', process.env)
+
+app.use(session(options))
 
 app.use(helmet())
 app.disable('x-powered-by')
