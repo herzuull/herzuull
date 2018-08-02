@@ -3,6 +3,36 @@
   src: url('../fonts/oldstyle.ttf');
 }
 
+@keyframes slow-down {
+  0% {
+    margin-top: -4rem;
+  }
+  100% {
+    margin-top: 0;
+  }
+}
+
+@keyframes fade-appear {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slide-from-left {
+  0% {
+    width: 30vw;
+  }
+  90% {
+    width: 50vw;
+  }
+}
+
 body,
 html {
   padding: 0;
@@ -33,8 +63,20 @@ li {
   display: block;
 }
 
-img {
+img:not(.overlayImage) {
   cursor: pointer;
+  transition: transform 1s;
+  animation: fade-appear 3s 1;
+}
+
+img:not(.overlayImage):hover {
+  transform: rotate(1deg) scale(1.05);
+}
+
+h1,
+h2,
+h3 {
+  animation: fade-appear 1s 1;
 }
 
 h1 {
@@ -45,9 +87,10 @@ h1 {
 }
 
 section.main {
+  position: relative;
   display: flex;
   min-height: 100vh;
-  max-width: 50vw;
+  width: 50vw;
   transition: blur 1s;
 }
 
@@ -73,6 +116,7 @@ aside.menu nav li {
   display: block;
   width: 100%;
   height: 5rem;
+  transition: transform 1s;
 }
 
 aside.menu nav ul {
@@ -85,23 +129,26 @@ aside.menu nav li a {
   width: 100%;
   height: 5rem;
   font-size: 1.7rem;
-  transition: text-shadow 0.3s, bold 0.3s;
+  transition: text-shadow 1s, bold 1s, transform 1s;
   text-align: right;
 }
 
 aside.menu nav a:hover {
+  transform: translate(-10px, -0);
   font-weight: bold;
   text-shadow: 0 0 10px rgba(255, 255, 255, 1);
 }
 
 main {
-  flex-grow: 2;
+  overflow: hidden;
   min-height: 100vh;
   background-color: white;
   color: black;
   padding: 0 20px;
   max-width: 100vw;
   font-size: 1.2rem;
+  width: 50vw;
+  animation: slide-from-left 1s 1;
 }
 
 .body-content > p > a {
@@ -110,6 +157,7 @@ main {
 }
 
 aside.social {
+  animation: fade-appear;
   min-height: 100vh;
   flex-grow: 3;
   max-width: 40vw;
@@ -126,10 +174,21 @@ div.overlay {
   top: 0;
 }
 
+@keyframes left-to-zero {
+  0% {
+    left: -1000px;
+  }
+
+  100% {
+    left: 0;
+  }
+}
 img.overlayImage {
+  position: absolute;
   left: 0;
   margin-top: 5vh;
   margin-left: 10vw;
+  animation: left-to-zero 2s 1;
 }
 
 div.closeButton:before {

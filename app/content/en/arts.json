@@ -34,6 +34,14 @@
         "alt": "Star Spawn on Jungle planet",
         "width": "30vw"
       }
+    },
+    {
+      "title": "Robin",
+      "image": {
+        "src": "./img/rouge-gorge.png",
+        "alt": "Robin on a tree branch",
+        "width": "30vw"
+      }
     }
   ]
 }

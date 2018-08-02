@@ -13,7 +13,9 @@
     <img src="{{paragraph.image.src}}" alt="{{paragraph.image.alt}}" style="width:{{paragraph.image.width}}" />
     {% endif %}
     {% if paragraph.object %}
-    <object data="{{paragraph.object.data}}" type="text/html" typemustmatch width="{{paragraph.object.width}}" height="{{paragraph.object.height}}"></object>
+    <object data="{{paragraph.object.data}}" type="text/html" typemustmatch width="{{paragraph.object.width}}" height="{{paragraph.object.height}}">
+        <p>Loading / Chargement...</p>
+    </object>
     {% endif %}
 {% endfor %}
 </section>

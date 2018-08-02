@@ -5,17 +5,24 @@ const path = require('path')
 const nunjucks = require('nunjucks')
 const helmet = require('helmet')
 const session = require('express-session')
+const RedisStore = require('connect-redis')(session)
 
 require('dotenv').config()
 
 app.use(helmet())
 app.disable('x-powered-by')
 
+const options = {
+  url: process.env.REDIS_URL,
+  password: process.env.REDIS_PASSWORD,
+}
+
 var sess = {
   secret: process.env.COOKIE_SECRET,
   cookie: {},
-  resave: true,
+  store: new RedisStore(options),
   saveUninitialized: true,
+  resave: false,
 }
 
 if (app.get('env') === 'production') {

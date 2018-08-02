@@ -9,8 +9,17 @@
       "text": "Forxak, FOReign Xenomorph Anihilate and Kill, Shoot them'up par excellence, j'ai voulu retranscrire l'atmosphere des Danmakus que l'on peut trouver sur des jeux comme Dodonpachi Dai Fukatsu ou plus récement sur Danmaku Unlimited."
     },
     {
+      "title": "Version actuelle : v5.1",
       "object": {
         "data": "https://forxak.herokuapp.com",
+        "width": "400",
+        "height": "600"
+      }
+    },
+    {
+      "title": "Ancienne version : v1.0",
+      "object": {
+        "data": "http://herzuull.free.fr/forxak-H1.0/game.html",
         "width": "400",
         "height": "600"
       }

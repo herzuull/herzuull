@@ -16,7 +16,7 @@
       "image": {
         "src": "./img/herzuull.png",
         "alt": "Herzuull",
-        "width": "20vw"
+        "width": "30vw"
       }
     },
     {
@@ -24,7 +24,7 @@
       "image": {
         "src": "./img/Chaos-Sorceror.png",
         "alt": "Chaos Sorceror image",
-        "width": "20vw"
+        "width": "30vw"
       }
     },
     {
@@ -32,7 +32,15 @@
       "image": {
         "src": "./img/cthulette.png",
         "alt": "Star Spawn on Jungle planet",
-        "width": "20vw"
+        "width": "30vw"
+      }
+    },
+    {
+      "title": "Rouge Gorge",
+      "image": {
+        "src": "./img/rouge-gorge.png",
+        "alt": "Rouge Gorge sur une branche",
+        "width": "30vw"
       }
     }
   ]

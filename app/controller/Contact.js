@@ -10,7 +10,7 @@ module.exports = {
       res.page = slug
       next()
     } else {
-      next('Not found')
+      next(slug + ' Not found')
     }
   },
 }
