@@ -16,10 +16,7 @@ var options = {
   secret: process.env.COOKIE_SECRET,
   cookie: {},
   store: new RedisStore({
-    host: process.env.REDIS_URL,
-    user: process.env.REDIS_USER,
-    port: process.env.REDIS_PORT,
-    password: process.env.REDIS_PASSWORD,
+    url: process.env.REDIS_URL,
   }),
   saveUninitialized: true,
   resave: false,
