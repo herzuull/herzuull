@@ -9,4 +9,7 @@ module.exports = {
     console.log('Session > ', req.session)
     res.redirect('back')
   },
+  set: function(locale) {
+    req.session.locale = locale
+  },
 }

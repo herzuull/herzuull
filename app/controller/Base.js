@@ -1,4 +1,7 @@
 module.exports = function(req, res, next) {
+  if (!req.session) {
+    require('./Locale').update('en')
+  }
   const sections = require(`../content/${req.session.locale}/sections`).sections
   res.locals = {
     locale: req.session.locale,
