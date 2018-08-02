@@ -9,9 +9,4 @@ module.exports = {
     console.log('Session > ', req.session)
     res.redirect('back')
   },
-  set: function(req, res, next) {
-    if (!!!req.session.locale) {
-      req.session.locale = process.env.DEFAULT_LOCALE
-    }
-  },
 }
