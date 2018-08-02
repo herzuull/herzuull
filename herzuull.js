@@ -32,6 +32,8 @@ if (process.env.NODE_ENV === 'production') {
 
 console.log('ENV => ', process.env)
 
+console.log('Session options > ', options)
+
 app.use(session(options))
 
 app.use(helmet())
