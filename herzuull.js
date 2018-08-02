@@ -12,6 +12,8 @@ require('dotenv').config()
 app.use(helmet())
 app.disable('x-powered-by')
 
+app.use(express.cookieParser())
+
 const options = {
   url: process.env.REDIS_URL,
   password: process.env.REDIS_PASSWORD,
